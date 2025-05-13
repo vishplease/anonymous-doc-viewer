@@ -26,19 +26,19 @@ async def simulate_viewer(viewer_id, stay_time):
 async def orchestrate_viewers():
     viewer_id = 0
     while True:
-        num_new_viewers = random.randint(1, 2)  # 🔽 Fewer viewers per wave
+        num_new_viewers = random.randint(1, 2)  
         viewer_tasks = []
 
         for _ in range(num_new_viewers):
             viewer_id += 1
-            stay_time = random.randint(60, 120)  # 🔽 Shorter lifetime
-            delay = random.randint(0, 20)        # optional: shorter entry delay
+            stay_time = random.randint(60, 120)  
+            delay = random.randint(0, 20)
             viewer_tasks.append(run_with_delay(viewer_id, stay_time, delay))
 
         for task in viewer_tasks:
             asyncio.create_task(task)
 
-        await asyncio.sleep(random.randint(45, 60))  # 🔼 Longer time between waves
+        await asyncio.sleep(random.randint(45, 60))  
 
 async def run_with_delay(viewer_id, stay_time, delay):
     await asyncio.sleep(delay)
