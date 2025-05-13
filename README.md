@@ -9,8 +9,7 @@ This project simulates multiple viewers for an online document (e.g. Google Docs
 1. **Clone the Repository**
 
    ```bash
-   git clone <your-repo-url>
-   cd <repo-folder>
+   git clone https://github.com/vishplease/anonymous-doc-viewer.git
    ```
 
 2. **Set the Document URL**
