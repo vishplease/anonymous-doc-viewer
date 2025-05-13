@@ -14,7 +14,7 @@ This project simulates multiple viewers for an online document (e.g. Google Docs
 
 2. **Set the Document URL**
 
-   Open `main.py` (or this script), and change the value of `doc_url` at the top to the document you want to simulate views on:
+   Open `google_doc_viewers.py`, and change the value of `doc_url` at the top to the document you want to simulate views on:
 
    ```python
    doc_url = "https://docs.google.com/document/your-doc-id/edit"
